@@ -87,7 +87,7 @@ echo "</div>"; //nav
 <footer>
 
 <span>This site was last modified on: <?php echo date("F d Y H:i:s.", getlastmod()); ?></span>
-
+<span>Check me out on <a href="http://github.com/achillesthetortise/CS2803.git">Github</a></span>
 </footer>
 </body>
 </html>
