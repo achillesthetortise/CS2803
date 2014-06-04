@@ -1,0 +1,27 @@
+#first {
+    background: lightblue;
+    width: 30%;
+    float: left;
+}
+
+#second {
+    background: lightgreen;
+    width: 30%;
+    float: left;
+}
+
+#third {
+    background: yellow;
+    clear: both;
+}
+
+#fourth {
+    background: mediumpurple;
+}
+
+#fifth {
+    background: gray;
+}
+
+
+

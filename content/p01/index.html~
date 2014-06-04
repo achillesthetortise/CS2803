@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+                <head>
+                                <title> Thomas Doolittle Bio Page </title>
+                </head>
+ 
+                <body>
+                                <h1> Thomas Doolittle </h1>
+ 
+                                <img src="img/me.jpg" />
+ 
+                                <ul>
+                                                <li> Preferred Name: Tommy </li>
+                                                <li> Birth City: Tampa, FL </li>
+                                                <li> High School City: Newnan, GA </li>
+                                                <li> High School: East Coweta </li>
+                                                <li> Class in School (Fr, So, Jr, Sr, MS, PhD): Sr </li>
+                                                <li> Dream Job(s):  </li> 
+                                </ul>
+ 
+                                <p>  </p>
+ 
+                                <hr>
+ 
+                                <h2> Hobbies & Interests </h2>
+                                <ol>
+                                                <li> Kickboxing </li>
+                                                <li> DIY Projects </li>
+                                                <li> Scuba Diving </li>
+                                                <li> Music </li>
+                                                <li> Education </li>
+                                </ol>
+ 
+                                <hr>
+ 
+                                <h2> Web Language Familiarity </h2>
+                                <p> 1=I have never used it.  3=I have used it once or twice but don't understand it.  5=I have created with it and feel comfortable in my abilities. </p>
+                                <ul>
+                                                <li> HTML --> 5 </li>
+                                                <li> CSS --> 5 </li>
+                                                <li> Javascript --> 2 </li>
+                                                <li> JQuery --> 1 </li>
+                                                <li> CSS3 --> 3 </li>
+                                                <li> PHP --> 5 </li>
+                                                <li> MySQL --> 5 </li>
+                                                <li> XML --> 3 </li>
+                                                <li> JSON --> 3 </li>
+                                                <li> AJAX --> 3 </li>
+                                                <li> WebSockets --> 3 </li>
+                                                <li> JSONP --> 1 </li>
+                                                <li> Cookies --> 3 </li>
+                                </ul>
+ 
+                </body>
+ 
+</html>

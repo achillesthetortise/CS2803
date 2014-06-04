@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header {
+    width: 100%;
+    //height: 35px;
+    background: #000000;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    padding-left: 25px;
+}
+
+header h3 {
+    padding-left: 25px;
+}
+
+body {
+    background-image: url(../img/space.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#nav {
+    margin-left: 25px;
+}
+
+#file {
+    margin-bottom: 5px;
+}
+
+
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#000000;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   color: #FFFFFF;
+}
+
+footer span {
+    padding-left: 25px;
+}

@@ -1,0 +1,7 @@
+#imgLarge {
+    content: url(../img/atlanta.jpg);
+}
+
+a:visited {
+    color: #0000FF;
+} 

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    padding: 10px;
+}
+
+body {
+    width: 800px;
+    margin-left: 50px;
+    background-image: url(../img/atlanta.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#main {
+    height: 0px;
+}
+
+nav {
+    background: #FFFFFF;
+}
+
+nav li {
+    display: inline;
+    padding: 5px;
+    margin: auto;
+}
+
+article {
+    padding: 30px;
+    width: 500px;
+    float: left; 
+    background: #FAFAFA; 
+    margin-top: -15px;
+}
+
+h1 {
+    color: red; 
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 50px;
+}
+
+
+ 
+#imgSmall {
+    float: right;
+    padding-top: 3px;
+}
+
+a:visited {
+    color: #0000FF;
+}

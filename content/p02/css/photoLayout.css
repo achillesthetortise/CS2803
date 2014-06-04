@@ -1,0 +1,46 @@
+body {
+    width: 800px;
+    margin-left: 50px;
+    background-image: url(../img/summer.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+#decoration {
+    margin-top: 20px;
+    float: left;
+    position: absolute;
+    width: 300px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    background: #344556;
+}
+
+nav {
+    background: #AAAAAA;
+    height: auto;
+    width: 200px;
+}
+
+#main {
+    margin-top: 20px;
+    margin-left: 350px;
+    padding: 15px;
+    float: right;
+    position: absolute;
+}
+
+#imgLarge {
+    content: url(../img/whale.jpg);
+}
+
+article {
+    background: #FFFFFF;
+    overflow: scroll;
+    height: 100px;
+    width: 420px;
+}

@@ -1,0 +1,15 @@
+h1 {
+	font-size: 50px;	
+	color: red;
+}
+#alpha {
+	text-decoration: underline;
+	font-weight: bold;
+ 	font-style: italic;
+   font-family: Arial;
+   color: red;
+}
+.p {
+	margin-left: 60px;	
+	}
+ 	

@@ -1,0 +1,33 @@
+
+body {
+    width: 800px;
+    margin-left: 50px;
+    background-image: url(../img/atlanta.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: #FFFFFF;
+}
+
+nav li {
+    display: inline;
+    padding: 5px;
+    margin: auto;
+}
+
+article {
+    padding: 30px;
+    width: 500px;
+    float: left;
+    backgroundb: #FAFAFA
+}
+
+h1 {
+    color: red;
+}
+
+#imgSmall {
+    float: right;
+}
