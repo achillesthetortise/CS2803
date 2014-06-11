@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta http-equiv="Content-Language" content="en">
+	<!--
+	Author: Thomas Doolittle
+	Class: CS2803
+	Assignment: Project04
+	Date: June 9, 2014
+	-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600' rel='stylesheet' type='text/css'>	
+	<title>Project04 Headline Gallery Layout</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesv2.css">
+	<script src="js/javascriptv2.js"></script>
+</head>
+<body>
+	<div id="logo">
+		<img src='http://lorempixel.com/150/50/technics/' onclick="changeAllImages();" />
+		<span onclick="changeLogo();"> LorisiuM </span>
+	</div>
+
+
+	<nav>
+		<ul>
+			<li> <span onclick="changeBackground(0);"> Quis </span> </li>
+			<li> <span onclick="changeBackground(1);"> Anim </span> </li>
+			<li> <span onclick="changeBackground(2);"> Sint </span> </li>
+			<li> <span onclick="changeBackground(3);"> Esse </span> </li>
+		</ul>
+	</nav>
+
+	<section>
+		<h1> Duis aute irure dolor in reprehenderit in voluptate velit esse</h1>
+		<article>
+			Dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. 
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</article>
+	</section>
+	
+	<div class="box row1 col1" id="box01" onclick="changeText()">&nbsp;</div>
+ 	<div class="box row1 col2" id="box02" onclick="centerDiv(this)">&nbsp;</div>
+	<div class="box row1 col3" id="box03">&nbsp;</div>
+
+	<div class="box row2 col1" id="box04">&nbsp;</div>
+ 	<div class="box row2 col2" id="box05">&nbsp;</div>
+	<div class="box row2 col3" id="box06">&nbsp;</div>
+
+	<div class="box row3 col1" id="box07">&nbsp;</div>
+ 	<div class="box row3 col2" id="box08">&nbsp;</div>
+	<div class="box row3 col3" id="box09">&nbsp;</div>	
+</body>
+</html>

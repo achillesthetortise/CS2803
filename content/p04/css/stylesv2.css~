@@ -1,0 +1,153 @@
+*{
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body{
+	position: absolute;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: url('../img/noirwhite.png') no-repeat;
+	background-size: 1280px;
+}
+
+/* ============================================================== */
+
+#logo{
+	position: absolute;	
+	left: 50px;
+	top: 50px;
+	width: 400px;
+	height: 50px;	
+	background: black;
+}
+
+
+
+#logo span{
+	position: absolute;
+	left: 150px;
+	top: 0;	
+	width: 250px;
+	color: white;
+	font-size: 50px;
+	text-align: right;
+}
+
+#logo img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 150px;
+}
+/* ============================================================== */
+
+nav{
+	position: absolute;	
+	left: 830px;
+	top: 50px;
+	width: 400px;
+	height: 25px;	
+
+	font-size: 25px;
+	text-align: center;
+}
+
+nav li{
+	list-style-type: none;
+	float: left;
+	width: 20%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	opacity: .75;	
+
+	color: black;
+}
+
+nav li:hover{
+	-webkit-animation: second 5s;
+}
+
+@-webkit-keyframes second{
+	50%  {font-size: 200%;}
+	100%  {font-size: 100%;}
+}
+
+/* ============================================================== */
+
+section{
+	position: absolute;	
+	left: 50px;
+	top: 150px;
+	width: 1180px;
+	height: 150px;
+	font-size: 125%;
+}
+
+section h1{
+	text-align: center;
+}
+
+/* =============================================================== */
+.box{
+	position: absolute;
+	width: 375px;
+	height: 175px;	
+	background-size: 100%;
+	box-shadow: 5px 5px 2px #888888;
+
+	-webkit-transition: -webkit-transform 1s;
+}
+
+.box:hover{
+	-webkit-transform: rotateX(45deg);
+}
+
+.row1{top: 350px;}
+
+.row2{top: 552px;}
+
+.row3{top: 755px;}
+
+.col1{left: 50px;}
+
+.col2{left: 452px;}
+
+.col3{left: 855px;}
+
+#box01{
+	background: url('http://lorempixel.com/400/200/technics/1');
+}
+
+#box02{
+	background: url('http://lorempixel.com/400/200/technics/2');
+}
+
+#box03{
+	background: url('http://lorempixel.com/400/200/technics/3');
+}
+
+#box04{
+	background: url('http://lorempixel.com/400/200/technics/4');
+}
+
+#box05{
+	background: url('http://lorempixel.com/400/200/technics/5');
+}
+
+#box06{
+	background: url('http://lorempixel.com/400/200/technics/6');
+}
+
+#box07{
+	background: url('http://lorempixel.com/400/200/technics/7');
+}
+
+#box08{
+	background: url('http://lorempixel.com/400/200/technics/8');
+}
+
+#box09{
+	background: url('http://lorempixel.com/400/200/technics/9');
+}

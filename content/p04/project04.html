@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta http-equiv="Content-Language" content="en">
+	<title>Project 4 - Javascript and CSS3</title>
+	<!--
+	Author: Thomas Doolittle
+	Class: CS2803
+	Assignment: Project04
+	Date: June 9, 2014
+	-->
+	<title>Project04 Headline Gallery Layout</title>
+	
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" type="text/css" href="css/stylesv2.css">
+
+	<script src="js/javascriptv2.js"></script>
+</head>
+<body>
+	<div id="logo">
+		<img src='http://lorempixel.com/150/50/technics/' onclick="changeAllImages();" />
+		<span onclick="changeLogo();"> Factoids </span>
+	</div>
+
+
+	<nav>
+		<ul>
+			<li> <span onclick="changeBackground(0);"> Quis </span> </li>
+			<li> <span onclick="changeBackground(1);"> Anim </span> </li>
+			<li> <span onclick="changeBackground(2);"> Sint </span> </li>
+			<li> <span onclick="changeBackground(3);"> Esse </span> </li>
+		</ul>
+	</nav>
+
+	<section>
+		<h1>My page of random facts!</h1>
+		<article>
+			So these pictures are just here cause they're cool, if you don't like them you can <b><a onclick="changeAllImages()">change them</a></b>.  Click on the images for a cool CSS3 effect triggered by JavaScript, along with a random fact about a random number (made possible with JSONP, JSON with Padding!!).
+
+
+		</article>
+	</section>
+	
+	<div class="box row1 col1" id="box01" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box01"></span></div>
+ 	<div class="box row1 col2" id="box02" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box02"></span></div>
+	<div class="box row1 col3" id="box03" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box03"></span></div>
+	<div class="box row2 col1" id="box04" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box04"></span></div>
+ 	<div class="box row2 col2" id="box05" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box05"></span></div>
+	<div class="box row2 col3" id="box06" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box06"></span></div>
+	<div class="box row3 col1" id="box07" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box07"></span></div>
+ 	<div class="box row3 col2" id="box08" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box08"</span></div>
+	<div class="box row3 col3" id="box09" onclick="windowDisplay(this)">&nbsp;<span class="facts" id="number-fact-box09"></span></div>	
+</body>
+
+<footer onmousedown="changeText()" onmouseup="changeText()">
+&nbsp;
+</footer>
+</html>

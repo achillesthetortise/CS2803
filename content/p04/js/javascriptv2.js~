@@ -1,0 +1,53 @@
+function changeText(){
+	//This function changes the text in the <section> element
+	document.getElementsByTagName("h1")[0].innerHTML ="We the People";
+	document.getElementsByTagName("article")[0].innerHTML ="of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.";
+}
+
+function changeBackground(number){
+	//This function changes the page's background
+	var colors = ["white", "gray", "burlywood", "olive"];
+	document.body.style.background=colors[number];
+	document.querySelector("#logo span").style.color=document.body.style.background;
+}
+
+function changeLogo(){
+	//This function inverts the logo
+	document.querySelector("#logo span").style.color="black";
+	document.querySelector("#logo span").style.background=document.body.style.background;
+}
+
+function changeAllImages(){
+	//This function changes all of the images on the page to a different theme
+	var elementId;
+	var imageName;
+	for(var i=1; i<=9; i++){
+		elementId = "box0" + i;
+		imageName = 'http://lorempixel.com/400/200/sports/' + i;
+		document.getElementById(elementId).style.background="url(" + imageName + ")";
+	}
+
+	imageName = 'http://lorempixel.com/150/50/sports/';
+	document.querySelector("#logo img").src=imageName;
+}
+
+function centerDiv(e) {
+    e.innerHTML = e.id;
+
+    var boxes = document.getElementsByClassName("box");
+
+    for(var i = 0; i < boxes.length; i++) {
+	
+	if( boxes[i].id != e.id ) {
+	
+	    console.log(boxes[i].id);
+	    boxes[i].style.hover.-webkit-transform = "rotateX(90deg)";
+	}
+    }
+    e.style.position = "fixed";
+    e.style.z-index = "100";
+    e.style.margin = "-100px 0 0 -100px";
+    e.style.top = "50%";
+    e.style.left = "50%";
+
+}
