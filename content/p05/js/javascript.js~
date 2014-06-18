@@ -1,0 +1,6 @@
+var foodNames = ['Hot Dog', 'Hamburger', 'Ice Cream'];
+
+function pageLayout() {
+
+
+}

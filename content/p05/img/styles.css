@@ -1,0 +1,107 @@
+* {
+    paddin: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: url('../img/background.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+#register {
+    margin-top: 100px;
+    margin-left: 50px;
+    background: url('../img/register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 25px;
+}
+
+#totalCost {
+    background: url('../img/register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 24px;
+    top: -60px;
+    height: 60px;
+    width: 250px;
+    box-shadow: 5px 0px 0px black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#screenTotal {
+    position: absolute;
+    background: #000000;
+    color: #FFFFFF;
+    top: 15px;
+    left: 15px;
+    width: 214px;
+    height: 44px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#total {
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    padding-right: 4px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    color: #00CC33
+}
+
+#itemSection {
+    position: absolute;
+    margin-left: 20px;
+}
+
+.button { 
+    cursor: pointer;
+    background: #FFFFFF;
+    border: outset 3px;
+}
+
+.itemPrice {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+#receipt {
+    background: url('../img/register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    margin-top: 100px;
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#screenReceipt {
+    position: absolute;
+    overflow: auto;
+    width: 260px;
+    left: 15px;
+    background: #000000;
+    color: #00CC33;
+    border-radius: 5px;
+    text-align: right;
+    padding: 5px;
+}
+
+#clear, #removeSelected {
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+    padding-top: 2px;
+}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <!--
+	Author: Thomas Doolittle
+	Class: CS2803
+	Assignment: Project05
+	Date: June 15, 2014
+    -->
+
+    <title>Project 04</title>
+    <script src="js/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+  </head>
+  
+  <body onload="pageLayout();">
+  </body>
+
+  </html>
