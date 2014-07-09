@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    background: #3366CC;
+    margin: 10px;
+    padding: 10px;
+}
+
+.firstName {
+    float: left;
+    display: block;
+    width: 40%;
+    margin-left: 5%;
+}
+
+.lastName {
+    float: left;
+    display: block;
+    width: 40%;
+    margin-left: 5%;
+}
+
+#UrbanDictionary {
+    background-color: #4e7ca0;
+
+
+}
+
+#BehindTheName {
+
+}
+
+#OnlineEtymologyDictionary { 
+
+}
