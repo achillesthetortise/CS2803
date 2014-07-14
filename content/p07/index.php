@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+  <head>
+    
+    <!--
+	Author: Thomas Doolittle
+	Class: CS2803
+	Assignment:Project02
+	Date: May 23, 2014 />
+    -->
+
+    <title> Basic Page </title>
+    <link id="pagestyle" rel="stylesheet" type="text/css" >
+    <!-- <script type="text/javascript">
+      function swapStyleSheet(sheet) {
+          document.getElementById('pagestyle').setAttribute('href',sheet);
+          var filename = sheet.split("/");
+          var t = filename[1];
+          var names = t.split(".");
+          document.title = names[0];
+      }
+    </script> --> 
+   
+
+  </head>
+  
+  <body>
+<?php
+
+echo "<link rel='stylesheet' type='text/css' href='css/".$_GET['stylePage']."' />";
+
+?>
+    <div id="decoration">
+      <header> <h1> Summer In Atlanta </h1> </header>
+
+      <nav>
+	<ul>
+	  <li> <a href="<?php echo $_SERVER['PHP_SELF']; ?>"> Basic Page </a> </li>
+	  <li> <a href="<?php echo $_SERVER['PHP_SELF'].'?stylePage=featured.css'; ?>"> Featured Graphic </a> </li>
+	  <li> <a href="<?php echo $_SERVER['PHP_SELF'].'?stylePage=photoLayout.css'; ?>"> Featured Photo </a> </li>
+	  <li> <a href="<?php echo $_SERVER['PHP_SELF'].'?stylePage=fullScreen.css'; ?>"> Full Screen Photo </a> </li>
+	</ul>
+      </nav> 
+      
+      
+      <img id="imgSmall" src="img/chameleon.jpg" height="200"/>
+
+    </div>
+
+    <div id="main">
+
+      <img id="imgLarge" />
+      
+      <article>
+	
+	<h2> Lorem Ipsum </h2>
+	<p> yoooBacon ipsum dolor sit amet drumstick spare ribs tenderloin swine, landjaeger meatloaf chicken salami doner shankle flank. Fatback landjaeger pig ham brisket spare ribs jowl drumstick filet mignon tri-tip hamburger bresaola ham hock salami. Ham hock ball tip turkey doner. Rump ribeye ball tip jowl short loin, strip steak pork chop boudin turkey. Pig bresaola prosciutto pork chop shankle shoulder. Beef ribs ham hock sirloin brisket bresaola andouille kielbasa ham pork loin sausage pork t-bone cow. Cow biltong tongue, pig jerky bacon pork chop pastrami t-bone meatloaf tail.
+	  </p><p>	  
+	  Leberkas porchetta jerky bacon fatback tenderloin hamburger shankle doner chicken pig meatloaf. Turkey t-bone hamburger, ball tip venison shankle porchetta fatback. Shoulder turkey tenderloin pastrami frankfurter, ground round t-bone bresaola fatback biltong pork pig tri-tip sausage. Shank short ribs tongue biltong shankle beef. </p>
+	
+      </article>
+    </div>
+    
+    
+  </body>
+</html>

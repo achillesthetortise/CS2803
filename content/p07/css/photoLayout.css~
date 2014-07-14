@@ -1,0 +1,9 @@
+nav {
+    float: left;
+
+}
+
+article {
+    float: right;
+
+}
