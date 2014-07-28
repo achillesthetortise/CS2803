@@ -1,0 +1,146 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-weight: light;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(left,black 2%, #003333 8%, #181818 10%, #181818 90%, #003333 92%, black 98%); 
+    /* For Opera 11.1 to 12.0 */ 
+    background: -o-linear-gradient(right, black 2%, #003333 10%, #003333 90%, black 98%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(right, black 2%, #003333 8%, #181818 10%, #181818 90%, #003333 92%, black 98%);
+    /* Standard syntax (must be last) */ 
+    background: linear-gradient(right, black 2%, #003333 8%, #181818 10%, #181818 90%, #003333 92%, black 98%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#brain {
+    height: 90px;
+    position: absolute;
+    top: 0px;
+    left: 2%; 
+    z-index: 2;
+    cursor: pointer;
+}
+
+#hiddenGame {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 0px;
+    left: 2%;
+    z-index: 1;
+    background: white;
+    cursor: pointer;
+}
+header {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 15%;
+    height: 100px;
+    width: 100%;
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(black 90%, #003333);
+    /* For Opera 11.1 to 12.0 */ 
+    background: -o-linear-gradient(black 90%, #003333);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(black 90%, #003333); 
+    /* Standard syntax (must be last) */
+    background: linear-gradient(black 90%, #003333);
+}
+
+
+
+
+#container-main {
+    position: relative;
+    background: #181818;
+    width: 1020px;
+}
+
+#about {
+    position: relative;
+    padding: 10px;
+    float: left;
+    top: 10px;
+    left: 20px;
+    color: white;
+    width: 100px;
+    height: 300px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#left-col {
+    color: white;
+    padding: 7px;
+    background: #080808;
+    float: left;
+    height: 400px;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#right-col {
+    font-size: 13px;
+    padding: 7px;
+    color: white;
+    background: #080808;
+    float: right;
+    height: 400px;
+    width: 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+footer {
+    clear: both;
+    background: #181818;
+    height: 60px;
+    text-align: center;
+} 
+
+a {
+    font-family: arial;
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #a8a8a8;
+}
+
+h1 {
+    font-family: "Lobster", cursive, sans-serif;
+    color: #003333;
+    font-size: 55px;
+    color: white;
+}
+
+@font-face {
+    font-family: "Metacopy";
+    src: url(../fonts/me______.ttf) format(truetype);
+}
+
+h3 {
+    font-size: 20px;
+    
+}
+
+.rss {
+    padding: 10px;
+}

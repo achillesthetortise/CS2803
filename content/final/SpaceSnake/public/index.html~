@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Game</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js" ></script>
+  <script src="js/jquery.hotkeys.js" ></script>
+  <script src="js/key_status.js" ></script>
+  <script src="js/util.js" ></script>
+  <script src="js/colpick.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/colpick.css" />
+  
+</head>
+
+<body>
+  <div id="container"> </div>
+  <div id="chatContainer"> </div>
+  <script id="create-game-template" type="text/template">
+
+    <div id="createGameWrapper">
+      <div id="introContent">
+	<span class="intro">Please enter your nickname.</span>
+	<input id="playerName" /> <br/>
+	<!-- Color Picker plugin      <div id="picker">Pick a Color!</div> -->
+	
+	<span class="intro">Pick a color: &nbsp; &nbsp; </span>
+	<select>
+	  <option value="blue">blue</option>
+	  
+	</select>
+	<button id="btnCreatePlayer" class="btn left">CREATE</button> <br/>
+      </div>
+    </div>
+    <script>
+    var color;
+    $('#btnCreatePlayer').click( function() {
+        var name = $('#playerName').val();
+        color = color ? color : '#ffffff';
+        chat_socket.emit('create player', {id: name, color: color, positions: [[-1,-1]]} );
+    });
+    
+/** Color Picker Plugin Option **
+    $('#picker').colpick({
+        onSubmit:function(hsb,hex,rgb,el) {
+	    $(el).css('background-color', '#'+hex);
+	    $(el).colpickHide();
+            color = '#'+hex;
+	},
+        onChange:function(hsb,hex,rgb,el) {
+            $(el).css('background','#'+hex);
+            color = '#'+hex;
+        }
+    });
+*/
+    </script>
+
+  </script>
+
+  <script id="enter-game-template" type="text/template">
+    <div id="createGameWrapper">
+      <span>Select a Game!</span>
+      <script> 
+	chat_socket.emit('findGames'); 
+	chat_socket.on('showGames', function(data) {
+	    data.forEach( function(entry) {	        
+	        $('#createGameWrapper').append( $("<button class='btnGameRoom' onclick='goToRoom("+entry+")' >"+entry+"</button>"));
+	    });
+	});
+
+      </script>
+    </div>
+    <script>	
+      function goToRoom(roomId) {
+          chat_socket.emit('enter room',{id: roomId, player: player});
+      }
+    </script>
+  </script>
+  
+  <script id="game-template" type="text/template">
+    <canvas> </canvas>    
+  </script>
+
+  <script id="game-chat-template" type="text/template">
+    <div id="chatscreen">
+      <div id="chatbox">
+	<ul id="messages"></ul> 
+      </div>
+      <form id="chatform" action="">
+	<input id="m" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+    <button id="logout">Log out</button>
+    <script>
+      $('#chatform').on('submit', function(e) {
+          e.preventDefault();
+          chat_socket.emit('chat message', { id: player.id, message: $('#m').val()} );
+          $('#m').val('');
+      });
+      $('#logout').click( function() {
+          clearInterval(refreshInterval);
+          alert("You have logged out!!");
+          $('#container').html( $('#create-game-template').html() );
+          $('#chatContainer').html( '' );
+          chat_socket.emit('logout',{player: player, game: Game});
+          chat_socket.disconnect();
+      });
+
+    </script>
+  </script>
+  
+  <script>
+    var chat_socket = io({'sync disconnect on unload':true});
+    var player = {};
+    var Game;
+    var here = false;
+    var FPS = 1;
+    var gameStarted = false;
+    var socketId;
+    var refreshInterval;
+
+    function startGame() {
+        var i = 0;
+        var direction = '';
+        var refreshInterval = setInterval( function() {
+            if(Game != undefined) {
+                if( keydown.left && player.direction != "E") {
+                    direction = "W";
+                } else if( keydown.right && player.direction != "W" ) {
+                    direction = "E";
+                } else if( keydown.down && player.direction != "N" ) {
+                    direction = "S";
+                } else if( keydown.up && player.direction != "S" ) {
+                    direction = "N";
+                }
+
+                if( i == 2 && direction != '' ) {
+                    if( player.direction == "E" && direction != "W" ||
+                        player.direction == "W" && direction != "E" ||
+                        player.direction == "N" && direction != "S" ||
+                        player.direction == "S" && direction != "N" ) {
+                      player.direction = direction;
+                    }
+
+                    chat_socket.emit('game update', {game: Game, player: player});
+                }
+                i = (i + 1) % 3;
+            }
+        }, 500/FPS*3);
+    }
+
+    chat_socket.on('connected', function(id) {
+        if( socketId == undefined) {
+            socketId = id;
+        }
+        if( !here ) {
+            $('#container').html( $('#create-game-template').html() );
+            here = true;
+        }
+    });
+
+    chat_socket.on('display game', function(game) {
+        game.players.forEach( function(entry) {
+            if( entry.id == player.id ) {
+                $('#container').html( $('#game-template').html() );
+                var canvas = $('canvas').get(0).getContext("2d");
+                Game = game;
+                player = entry;
+                FPS = Game.FPS;
+                drawGame(canvas);
+                if( !gameStarted ) {
+                    gameStarted = true;
+                    $('#chatContainer').html( $('#game-chat-template').html() );
+                    $('#messages').html( entry.chat );
+                    startGame();
+                }
+            }
+        });
+    });
+
+    function drawGame(canvas) {
+        Game.players.forEach( function(entry) {
+            canvas.fillStyle = entry.color;
+            for( var i = 0; i < entry.positions.length; ++i ) {
+            canvas.fillRect(entry.positions[i][0]*10,entry.positions[i][1]*10,10,10);
+	    }
+        });
+        Game.food.forEach( function(f) {
+            canvas.fillStyle = '#000000';
+            canvas.fillRect(f[0]*10, f[1]*10, 10, 10);
+        });
+        for( var i = 0; i < Game.players.length; ++i ) {
+            canvas.font = "20px Georgia";
+            canvas.fillStyle = Game.players[i].color;
+            canvas.fillText(Game.players[i].score, 5 + (i*30),15);
+	}
+    }
+
+    chat_socket.on('playerCreated', function(data) {
+        console.log(data);
+        if(socketId != undefined) {
+            if( data.sockId == socketId) {
+                player = data;
+                $('#container').html( $('#enter-game-template').html() );
+            }
+        }
+    });
+
+    chat_socket.on('chat message', function(data) {
+        $('#messages').append($('<li>').html('<b>'+data.id+'</b>: &nbsp;'+data.message));
+    });
+     
+    chat_socket.on('still playing', function() {
+        chat_socket.emit('reset players', { id: Game.id, player: player });
+    });
+
+  </script>
+
+    
+
+  
+</body>
+
+
+</html>

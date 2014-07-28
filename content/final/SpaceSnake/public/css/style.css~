@@ -1,0 +1,118 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    font: 13px Helvetica, Arial;
+}
+
+#container {
+    position: absolute;
+}
+
+canvas {
+    position: absolute;
+    background: url("../img/background1.jpg") no-repeat center center fixed;
+    
+    top: 40px;
+    left: 20px;
+    height: 320px;
+    width: 750px;
+}
+
+#createGameWrapper {
+    position: absolute;
+    background: black;
+    top: 40px;
+    left: 20px;
+    height: 320px;
+    width: 1160px;
+    z-index: 1;
+    color: white;
+}
+
+#introContent {
+    border-left-radius: 50px;
+    border-right-radius: 20px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 40%;
+    left: 40%;
+    background: orange;
+}
+
+#picker {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding-top: 38px;
+    padding-left: 8px;
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    background: white;
+    color: black;
+}
+
+.btnGameRoom {
+    position: absolute;
+    float: left;
+    margin-left: 25px;
+    padding: 8px;
+    margin-top: 55px;
+}
+
+#chatscreen {
+    position: absolute;
+    left: 780px;
+    top: 40px;
+    height: 320px;
+    width: 400px;
+    background: yellow;
+}
+#chatbox {
+    overflow-y: scroll;
+    height: 279px;
+    width: 100%;
+}
+form { 
+    position: absolute;
+    bottom: 0px;
+    background: #000; 
+    padding: 3px; 
+    float: right;
+    display: block;
+    width: 100%;
+}
+
+form input { 
+    border: 0; 
+    padding: 10px; 
+    width: 85%; 
+    margin-right: .5%; 
+}
+
+form button { 
+    width: 14%; 
+    background: rgb(130, 224, 255); 
+    border: none; 
+    padding: 10px; 
+}
+
+#messages { 
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li { 
+    padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) { 
+    background: #eee; 
+}
