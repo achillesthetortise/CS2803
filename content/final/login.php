@@ -16,7 +16,7 @@ if( !empty($_POST) ) {
         
         if( preg_match('/^(?:[\w\d]+\.?)+@(?:(?:[\w\d]\-?)+\.)+\w{2,4}$/i', $email) ) {
 
-            $con=mysqli_connect("localhost","root","dominate12","MiddleBrain");
+            $con=mysqli_connect("localhost","root","**********","MiddleBrain");
             // Check connection
             if (mysqli_connect_errno()) {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
