@@ -2,7 +2,7 @@
 
 if( !empty($_POST) ) {
 echo "Starting database connection...\n";
-$con=mysqli_connect("localhost","root","dominate12","MiddleBrain");
+$con=mysqli_connect("localhost","root","**********","MiddleBrain");
 
     foreach($_POST as $key => $value) {
         if (!is_array($key)) {
